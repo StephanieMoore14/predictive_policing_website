@@ -1,7 +1,7 @@
 ---
 layout: page
-title: A Dive Into How Predictive Policing Works and its Effectiveness
-description: A Dive Into How Predictive Policing Works and its Effectiveness
+title: Is Predictive Policing Preventative?
+description: Is Predictive Policing Preventative?
 ---
 
 ## Overview
