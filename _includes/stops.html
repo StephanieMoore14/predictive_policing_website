@@ -1,0 +1,85 @@
+
+
+
+
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.2.min.js" integrity="sha384-ufR9RFnRs6lniiaFvtJziE0YeidtAgBRH6ux2oUItHw5WTvE1zuk9uzhUU/FJXDp" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.2.min.js" integrity="sha384-8QM/PGWBT+IssZuRcDcjzwIh1mkOmJSoNMmyYDZbCfXJg3Ap1lEvdVgFuSAwhb/J" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="b63fb535-e114-45d9-90d3-6f3993a9a6d8" data-root-id="9799"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="10143">
+          {"dd10b435-1880-4d1f-8daa-66af34570d7c":{"roots":{"references":[{"attributes":{"children":[{"id":"9798"},{"id":"9754"}]},"id":"9799","type":"Column"},{"attributes":{},"id":"9770","type":"BasicTicker"},{"attributes":{"ticks":[2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]},"id":"9794","type":"FixedTicker"},{"attributes":{"text":"Pedestrian &amp; Traffic Stops Trends per Division"},"id":"9755","type":"Title"},{"attributes":{},"id":"9759","type":"DataRange1d"},{"attributes":{},"id":"9757","type":"DataRange1d"},{"attributes":{"args":{"opts":[[["Year","@Year"],["Count","@CENTRAL"]],[["Year","@Year"],["Count","@DEVONSHIRE"]],[["Year","@Year"],["Count","@FOOTHILL"]],[["Year","@Year"],["Count","@HARBOR"]],[["Year","@Year"],["Count","@HOLLENBECK"]],[["Year","@Year"],["Count","@HOLLYWOOD"]],[["Year","@Year"],["Count","@MISSION"]],[["Year","@Year"],["Count","@NEWTON"]],[["Year","@Year"],["Count","@NORTHEAST"]],[["Year","@Year"],["Count","@NORTHHOLLYWOOD"]],[["Year","@Year"],["Count","@OLYMPIC"]],[["Year","@Year"],["Count","@PACIFIC"]],[["Year","@Year"],["Count","@RAMPART"]],[["Year","@Year"],["Count","@SEVENTYSEVENTH"]],[["Year","@Year"],["Count","@SOUTHEAST"]],[["Year","@Year"],["Count","@SOUTHWEST"]],[["Year","@Year"],["Count","@TOPANGA"]],[["Year","@Year"],["Count","@VANNUYS"]],[["Year","@Year"],["Count","@WESTLA"]],[["Year","@Year"],["Count","@WESTVALLEY"]],[["Year","@Year"],["Count","@WILSHIRE"]]],"renderer":{"id":"9792"},"source":{"id":"8976"},"tt":[{"id":"9780"}]},"code":"\n        if (cb_obj.value=='CENTRAL') {\n            tt[0].tooltips=opts[0];\n        } else if (cb_obj.value=='DEVONSHIRE') {\n            tt[0].tooltips=opts[1];\n        } else if (cb_obj.value=='FOOTHILL') {\n            tt[0].tooltips=opts[2];\n        } else if (cb_obj.value=='HARBOR') {\n            tt[0].tooltips=opts[3];\n        } else if (cb_obj.value=='HOLLENBECK') {\n            tt[0].tooltips=opts[4];\n        } else if (cb_obj.value=='HOLLYWOOD') {\n            tt[0].tooltips=opts[5];\n        } else if (cb_obj.value=='MISSION') {\n            tt[0].tooltips=opts[6];\n        } else if (cb_obj.value=='NEWTON') {\n            tt[0].tooltips=opts[7];\n        } else if (cb_obj.value=='NORTH EAST') {\n            tt[0].tooltips=opts[8];\n        } else if (cb_obj.value=='NORTH HOLLYWOOD') {\n            tt[0].tooltips=opts[9];\n        } else if (cb_obj.value=='OLYMPIC') {\n            tt[0].tooltips=opts[10];\n        } else if (cb_obj.value=='PACIFIC') {\n            tt[0].tooltips=opts[11];\n        } else if (cb_obj.value=='RAMPART') {\n            tt[0].tooltips=opts[12];\n        } else if (cb_obj.value=='SEVENTY-SEVENTH') {\n            tt[0].tooltips=opts[13];\n        } else if (cb_obj.value=='SOUTH EAST') {\n            tt[0].tooltips=opts[14];\n        } else if (cb_obj.value=='SOUTH WEST') {\n            tt[0].tooltips=opts[15];\n        } else if (cb_obj.value=='TOPANGA') {\n            tt[0].tooltips=opts[16];\n        } else if (cb_obj.value=='VAN NUYS') {\n            tt[0].tooltips=opts[17];\n        } else if (cb_obj.value=='WEST LA') {\n            tt[0].tooltips=opts[18];\n        } else if (cb_obj.value=='WEST VALLEY') {\n            tt[0].tooltips=opts[19];\n        } else {\n            tt[0].tooltips=opts[20];\n        }\n        \n        if (cb_obj.value=='NORTH EAST') {\n            renderer.glyph.y.field = 'NORTHEAST';\n        } else if (cb_obj.value=='NORTH HOLLYWOOD') {\n            renderer.glyph.y.field = 'NORTHHOLLYWOOD';\n        } else if (cb_obj.value=='SEVENTY-SEVENTH') {\n            renderer.glyph.y.field = 'SEVENTYSEVENTH';\n        } else if (cb_obj.value=='SOUTH EAST') {\n            renderer.glyph.y.field = 'SOUTHEAST';\n        } else if (cb_obj.value=='SOUTH WEST') {\n            renderer.glyph.y.field = 'SOUTHWEST';\n        } else if (cb_obj.value=='VAN NUYS') {\n            renderer.glyph.y.field = 'VANNUYS';\n        } else if (cb_obj.value=='WEST LA') {\n            renderer.glyph.y.field = 'WESTLA';\n        } else if (cb_obj.value=='WEST VALLEY') {\n            renderer.glyph.y.field = 'WESTVALLEY';\n        } else {\n            renderer.glyph.y.field = cb_obj.value;\n        }\n        \n        source.change.emit();\n    "},"id":"9797","type":"CustomJS"},{"attributes":{},"id":"9773","type":"PanTool"},{"attributes":{"source":{"id":"8976"}},"id":"9793","type":"CDSView"},{"attributes":{"line_color":"#1f77b4","x":{"field":"Year"},"y":{"field":"CENTRAL"}},"id":"9790","type":"Line"},{"attributes":{},"id":"8979","type":"UnionRenderers"},{"attributes":{},"id":"8980","type":"Selection"},{"attributes":{"axis_label":"Number of stops","formatter":{"id":"10018"},"ticker":{"id":"9770"}},"id":"9769","type":"LinearAxis"},{"attributes":{},"id":"9776","type":"SaveTool"},{"attributes":{"js_property_callbacks":{"change:value":[{"id":"9797"}]},"options":["CENTRAL","DEVONSHIRE","FOOTHILL","HARBOR","HOLLENBECK","HOLLYWOOD","MISSION","NEWTON","NORTH EAST","NORTH HOLLYWOOD","OLYMPIC","PACIFIC","RAMPART","SEVENTY-SEVENTH","SOUTH EAST","SOUTH WEST","TOPANGA","VAN NUYS","WEST LA","WEST VALLEY","WILSHIRE"],"title":"Division","value":"CENTRAL"},"id":"9798","type":"Select"},{"attributes":{"data":{"CENTRAL":[60269,63186,30982,54323,125417,126384,33671,43144,36448,45084],"DEVONSHIRE":[3965,18197,44408,43821,35555,33824,26511,30424,27287,30050],"FOOTHILL":[6262,48773,80231,9811,18898,1,16318,34481,62510,24644],"HARBOR":[7,68847,34093,29511,9,7076,39837,16985,32855,40808],"HOLLENBECK":[9883,31391,21521,6,16024,16381,14,23066,34795,52651],"HOLLYWOOD":[437,40566,38798,237568,5154,12623,32033,52300,9238,30235],"MISSION":[19121,21345,42052,41925,51497,10013,29599,33156,31836,42440],"NEWTON":[33450,32281,67726,41517,9866,51798,71291,33014,49547,64031],"NORTHEAST":[22004,16792,19297,20482,14819,29745,51670,58459,14295,36720],"NORTHHOLLYWOOD":[20736,5959,43678,44972,48482,19909,30496,57926,3814,30765],"OLYMPIC":[35266,49131,61735,23738,61058,25859,22364,43459,45488,8085],"PACIFIC":[72366,86045,54050,39631,32421,48200,21229,55664,14536,15243],"RAMPART":[11243,38739,21037,16514,50322,10871,6351,43790,12071,49030],"SEVENTYSEVENTH":[40510,133507,70246,29852,64187,21309,44127,38930,69241,24499],"SOUTHEAST":[19657,57854,44822,16652,61816,92470,11005,28699,56684,27469],"SOUTHWEST":[38838,58856,47175,46043,11328,41894,46380,30244,98324,40909],"TOPANGA":[16766,30498,61275,29589,13858,24511,24102,15847,36983,17490],"VANNUYS":[48249,47321,24407,86659,63708,23659,63353,17069,12537,8130],"WESTLA":[31252,31350,40747,10360,46628,6515,9031,11208,19894,22021],"WESTVALLEY":[24701,46677,49592,23148,32204,4758,14311,26050,38624,26076],"WILSHIRE":[34169,23147,31912,53278,69498,12476,33905,29684,17412,36688],"Year":[2010,2011,2012,2013,2014,2015,2016,2017,2018,2019],"index":[0,1,2,3,4,5,6,7,8,9]},"selected":{"id":"8980"},"selection_policy":{"id":"8979"}},"id":"8976","type":"ColumnDataSource"},{"attributes":{"axis":{"id":"9765"},"ticker":null},"id":"9768","type":"Grid"},{"attributes":{},"id":"9763","type":"LinearScale"},{"attributes":{"below":[{"id":"9765"}],"center":[{"id":"9768"},{"id":"9772"}],"left":[{"id":"9769"}],"plot_height":500,"plot_width":500,"renderers":[{"id":"9792"}],"title":{"id":"9755"},"toolbar":{"id":"9781"},"toolbar_location":null,"x_range":{"id":"9757"},"x_scale":{"id":"9761"},"y_range":{"id":"9759"},"y_scale":{"id":"9763"}},"id":"9754","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"9777","type":"ResetTool"},{"attributes":{},"id":"9774","type":"WheelZoomTool"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","x":{"field":"Year"},"y":{"field":"CENTRAL"}},"id":"9791","type":"Line"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"9779","type":"BoxAnnotation"},{"attributes":{"callback":null,"tooltips":[["Year","@Year"],["Count","@CENTRAL"]]},"id":"9780","type":"HoverTool"},{"attributes":{"data_source":{"id":"8976"},"glyph":{"id":"9790"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"9791"},"selection_glyph":null,"view":{"id":"9793"}},"id":"9792","type":"GlyphRenderer"},{"attributes":{"overlay":{"id":"9779"}},"id":"9775","type":"BoxZoomTool"},{"attributes":{},"id":"9761","type":"LinearScale"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"9773"},{"id":"9774"},{"id":"9775"},{"id":"9776"},{"id":"9777"},{"id":"9778"},{"id":"9780"}]},"id":"9781","type":"Toolbar"},{"attributes":{},"id":"10018","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"9769"},"dimension":1,"ticker":null},"id":"9772","type":"Grid"},{"attributes":{},"id":"9778","type":"HelpTool"},{"attributes":{"axis_label":"Year","formatter":{"id":"10020"},"ticker":{"id":"9794"}},"id":"9765","type":"LinearAxis"},{"attributes":{},"id":"10020","type":"BasicTickFormatter"}],"root_ids":["9799"]},"title":"Bokeh Application","version":"2.0.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('10143').textContent;
+                  var render_items = [{"docid":"dd10b435-1880-4d1f-8daa-66af34570d7c","root_ids":["9799"],"roots":{"9799":"b63fb535-e114-45d9-90d3-6f3993a9a6d8"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
