@@ -3,6 +3,7 @@ layout: page
 title: A Dive Into How Predictive Policing Works and its Effectiveness
 description: A Dive Into How Predictive Policing Works and its Effectiveness
 ---
+
 ## Overview
 As many cities move toward using machine learning in their policing systems, we want to explore how they affect the policed people. Several cities have implemented the use of predictive policing algorithms including New York City, NY and Santa Cruz, CA. The models built for ‘predictive policing’ claim to have reduced crime and increased efficiency in police resources. These claims have led us to investigate the question:  “How is predictive policing being used and what is the effect on traffic stops?”. 
 
